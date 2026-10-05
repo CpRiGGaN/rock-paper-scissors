@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rps.exe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="window" id="app-window">
+        <header class="title-bar">
+            <div class="title-bar-text">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==" alt="icon" class="title-icon" width="16" height="16">
+                rps.exe - Камінь, ножиці, папір
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </header>
+
+        <section class="window-body">
+            <fieldset>
+                <legend>Статистика сесії</legend>
+                <div class="score-display">
+                    <div class="score-field">
+                        <label>Гравець:</label>
+                        <input type="text" id="score-player" value="0" readonly>
+                    </div>
+                    <div class="score-field">
+                        <label>Ваш уявний друг:</label>
+                        <input type="text" id="score-computer" value="0" readonly>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="action-area">
+                <legend>Ваш хід</legend>
+                <div class="button-group">
+                    <button class="win98-btn" data-choice="rock">Камінь</button>
+                    <button class="win98-btn" data-choice="scissors">Ножиці</button>
+                    <button class="win98-btn" data-choice="paper">Папір</button>
+                </div>
+            </fieldset>
+
+            <div class="status-box">
+                <div class="log-area">
+                    <p>Вибір гравця: <span id="log-player">Очікування...</span></p>
+                    <p>Вибір системи: <span id="log-computer">Очікування...</span></p>
+                </div>
+                <div class="verdict-display inset-deep" id="verdict">Система повністю оновлена.</div>
+            </div>
+
+            <div class="footer-controls">
+                <button class="win98-btn" id="btn-reset">Скинути лічильники</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
